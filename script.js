@@ -3,23 +3,24 @@ document.addEventListener("DOMContentLoaded", () => {
   const toggleButton = document.getElementById("toggleLight");
   const icon = document.querySelector("#toggleLight i");
   const body = document.querySelector("body");
-
-  toggleButton.addEventListener("click", () => {
+  const html = document.documentElement;
+  toggleTheme.addEventListener("click", () => {
     // Toggle dark/light classes
     body.classList.toggle("bg-light");
     body.classList.toggle("text-dark");
 
+    html.classList.toggle('dark')
     // Toggle icon
     icon.classList.toggle("bi-moon");
 
     // Toggle hover button classes
-    toggleButton.classList.toggle("border-black");
-    toggleButton.classList.toggle("hover:bg-dark");
-    toggleButton.classList.toggle("hover:text-light");
+    toggleTheme.classList.toggle("border-black");
+    toggleTheme.classList.toggle("hover:bg-dark");
+    toggleTheme.classList.toggle("hover:text-light");
   });
 });
 
-// function for dynamic styling
+// function for dynamic styling in navbar
 document.addEventListener("DOMContentLoaded", () => {
   const links = document.querySelectorAll("nav ul li a"); // Select all navbar links
   // get the current pathname
@@ -29,7 +30,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const href = link.getAttribute("href");
 
     // validate the link if the link have the same value for attribute
-    if (currentPath.includes(href) || href === currentPath) {
+    if (href === currentPath || currentPath.includes(href)) {
       // add underline
       link.classList.add("underline");
     } else {
@@ -37,4 +38,25 @@ document.addEventListener("DOMContentLoaded", () => {
       link.classList.remove("underline");
     }
   });
+});
+// function to toggle navbar content
+document.addEventListener("DOMContentLoaded", () => {
+    // get the Importand DOMS
+    const toggleNavbarButton = document.getElementById('toggleNavbar');
+    const navbarContent = document.getElementById('toggleNavbarContent');
+
+    toggleNavbarButton.addEventListener('click', () => {
+      navbarContent.classList.toggle('flex')
+      navbarContent.innerHTML = `<div class="flex ">hey</div>`
+    })
+}) 
+
+// validation for pathname to activate my dynamic styling
+document.addEventListener("DOMContentLoaded", () => {
+  if (
+    window.location.pathname === "/Franciss" ||
+    window.location.pathname === "/"
+  ) {
+    window.location.href = "/index.html";
+  }
 });
