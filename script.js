@@ -1,6 +1,7 @@
 // function for darkmode and lightmode
 document.addEventListener("DOMContentLoaded", () => {
-  const toggleButton = document.getElementById("toggleLight");
+  const toggleTheme = document.getElementById("toggleLight");
+  const toggleNavbar = document.getElementById("toggleNavbar");
   const icon = document.querySelector("#toggleLight i");
   const body = document.querySelector("body");
   const html = document.documentElement;
@@ -9,7 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
     body.classList.toggle("bg-light");
     body.classList.toggle("text-dark");
 
-    html.classList.toggle('dark')
+    html.classList.toggle("dark");
     // Toggle icon
     icon.classList.toggle("bi-moon");
 
@@ -17,6 +18,9 @@ document.addEventListener("DOMContentLoaded", () => {
     toggleTheme.classList.toggle("border-black");
     toggleTheme.classList.toggle("hover:bg-dark");
     toggleTheme.classList.toggle("hover:text-light");
+
+    // toggle for smaller screen navbar
+    toggleNavbar.classList.toggle("border-dark");
   });
 });
 
@@ -39,17 +43,31 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 });
+
 // function to toggle navbar content
 document.addEventListener("DOMContentLoaded", () => {
-    // get the Importand DOMS
-    const toggleNavbarButton = document.getElementById('toggleNavbar');
-    const navbarContent = document.getElementById('toggleNavbarContent');
+  // get the Important DOMS
+  const toggleNavbarButton = document.getElementById("toggleNavbar");
 
-    toggleNavbarButton.addEventListener('click', () => {
-      navbarContent.classList.toggle('flex')
-      navbarContent.innerHTML = `<div class="flex ">hey</div>`
-    })
-}) 
+  toggleNavbarButton.addEventListener("click", () => {
+    Swal.fire({
+      title: "Where did you want to go? ",
+      html: `
+        <div class="flex flex-col gap-2 items-start">
+        <a href="index.html" class="hover:underline">---> Home</a>  
+        <a href="index.html" class="hover:underline">---> About</a>  
+        <a href="index.html" class="hover:underline">---> Porfolio</a>  
+        <a href="index.html" class="hover:underline">---> Contacts</a>  
+        </div>
+      `,
+      showConfirmButton: false,
+      customClass: {
+        popup: "bg-dark text-white", // Custom class for the whole popup
+        title: "text-lg",
+      },
+    });
+  });
+});
 
 // validation for pathname to activate my dynamic styling
 document.addEventListener("DOMContentLoaded", () => {
