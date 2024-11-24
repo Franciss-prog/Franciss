@@ -28,14 +28,14 @@
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   </head>
 
-  <body class="bg-dark text-light">
+  <body class="dark:bg-dark dark:text-light bg-light text-dark">
     <main class="h-screen overflow-hidden relative max-md:px-10 max-lg:p-5">
       <!-- navbar -->
       <nav
         class="flex items-center justify-between h-20 p-20 max-md:px-10 max-sm:px-5"
       >
         <!-- three dots -->
-        <section class="flex items-center gap-6">
+        <section class="flex items-center gap-6 max-md:gap-4 max-sm:gap-3">
           <img
             class="h-[20px] max-md:h-[15px]"
             src="https://upload.wikimedia.org/wikipedia/commons/0/0e/Basic_red_dot.png"
@@ -82,7 +82,7 @@
           <img
             src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/d8c35aab-28fb-4b5f-af66-57c4dba5cd74/dc8tu3k-2e6e6f55-1e77-4ddd-b563-ea634ccf109d.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2Q4YzM1YWFiLTI4ZmItNGI1Zi1hZjY2LTU3YzRkYmE1Y2Q3NFwvZGM4dHUzay0yZTZlNmY1NS0xZTc3LTRkZGQtYjU2My1lYTYzNGNjZjEwOWQucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.g9v_yAxK24UQpaj99xpUOwHEGdNWxZdBsBlX_UXiFOo"
             alt="plauge"
-            class="h-[350px] max-md:h-[250px]"
+            class="h-[350px] max-md:h-[250px] max-sm:h-[200px]"
           />
         </div>
 
@@ -111,14 +111,6 @@
           <p class="text-yellow-400">}</p>
         </div>
       </section>
-
-      <!-- toggle light mode -->
-      <button
-        class="absolute right-20 bottom-12 text-xl border border-1 p-2 rounded-md hover:bg-light hover:text-dark transition-all max-md:text-md max-sm:text-sm max-sm:right-16"
-        id="toggleLight"
-      >
-        <i class="bi bi-brightness-high"></i>
-      </button>
     </main>
   </body>
   <!-- script -->

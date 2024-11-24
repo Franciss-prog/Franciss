@@ -1,28 +1,4 @@
-// function for darkmode and lightmode
-document.addEventListener("DOMContentLoaded", () => {
-  const toggleTheme = document.getElementById("toggleLight");
-  const toggleNavbar = document.getElementById("toggleNavbar");
-  const icon = document.querySelector("#toggleLight i");
-  const body = document.querySelector("body");
-  const html = document.documentElement;
-  toggleTheme.addEventListener("click", () => {
-    // Toggle dark/light classes
-    body.classList.toggle("bg-light");
-    body.classList.toggle("text-dark");
-
-    html.classList.toggle("dark");
-    // Toggle icon
-    icon.classList.toggle("bi-moon");
-
-    // Toggle hover button classes
-    toggleTheme.classList.toggle("border-black");
-    toggleTheme.classList.toggle("hover:bg-dark");
-    toggleTheme.classList.toggle("hover:text-light");
-
-    // toggle for smaller screen navbar
-    toggleNavbar.classList.toggle("border-dark");
-  });
-});
+// layout functions
 
 // function for dynamic styling in navbar
 document.addEventListener("DOMContentLoaded", () => {
@@ -40,6 +16,7 @@ document.addEventListener("DOMContentLoaded", () => {
     } else {
       // remove underline
       link.classList.remove("underline");
+      link.classList.add("hover:underline");
     }
   });
 });
@@ -54,10 +31,10 @@ document.addEventListener("DOMContentLoaded", () => {
       title: "Where did you want to go? ",
       html: `
         <div class="flex flex-col gap-2 items-start">
-        <a href="index.html" class="hover:underline">---> Home</a>  
-        <a href="index.html" class="hover:underline">---> About</a>  
-        <a href="index.html" class="hover:underline">---> Porfolio</a>  
-        <a href="index.html" class="hover:underline">---> Contacts</a>  
+          <a href="index.html" class="hover:underline max-md:text-md max-sm:text-sm">---> Home</a>  
+          <a href="about.html" class="hover:underline max-md:text-md max-sm:text-sm">---> About</a>  
+          <a href="portfolio.html" class="hover:underline max-md:text-md max-sm:text-sm">---> Porfolio</a>  
+          <a href="contact.html" class="hover:underline max-md:text-md max-sm:text-sm">---> Contacts</a>  
         </div>
       `,
       showConfirmButton: false,
@@ -75,6 +52,15 @@ document.addEventListener("DOMContentLoaded", () => {
     window.location.pathname === "/Franciss" ||
     window.location.pathname === "/"
   ) {
-    window.location.href = "/index.html";
+    window.location.href = "index.html";
   }
+});
+// about page styles cuz im lazy to manually put all the style
+document.addEventListener("DOMContentLoaded", () => {
+  // get the target div element
+  const stacks = document.querySelectorAll("#techstack a");
+
+  stacks.forEach((stacks) => {
+    stacks.classList.add("hover:text-orange-400");
+  });
 });
