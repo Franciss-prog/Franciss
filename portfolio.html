@@ -29,7 +29,7 @@
   </head>
 
   <body class="bg-dark text-light">
-    <main class="h-screen overflow-hidden relative max-md:px-10 max-lg:p-5">
+    <main class="h-screen overflow-hidden relative max-md:px-10 max-lg:p-5 ">
       <!-- navbar -->
       <nav
         class="flex items-center justify-between h-20 p-20 max-md:px-10 max-sm:px-5"
@@ -75,42 +75,18 @@
       </nav>
       <!-- main content -->
       <section
-        class="flex justify-center items-center h-[70%] gap-10 max-md:flex-col"
+        class="flex justify-start items-start h-[70%] px-20 max-md:px-0 flex-col"
       >
-        <!-- profile image -->
-        <div>
-          <img
-            src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/d8c35aab-28fb-4b5f-af66-57c4dba5cd74/dc8tu3k-2e6e6f55-1e77-4ddd-b563-ea634ccf109d.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2Q4YzM1YWFiLTI4ZmItNGI1Zi1hZjY2LTU3YzRkYmE1Y2Q3NFwvZGM4dHUzay0yZTZlNmY1NS0xZTc3LTRkZGQtYjU2My1lYTYzNGNjZjEwOWQucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.g9v_yAxK24UQpaj99xpUOwHEGdNWxZdBsBlX_UXiFOo"
-            alt="plauge"
-            class="h-[350px] max-md:h-[250px] max-sm:h-[200px]"
-          />
+        <div class="font-bold text-4xl mb-20 max-md:text-2xl max-sm:text-lg">
+          <p>[Franciss@root~]$ <span>ls Projects</span></p>
         </div>
-
+        <!-- portfolio container -->
         <div
-          class="flex flex-col items-start gap-4 font-bold text-xl max-md:text-lg max-sm:text-sm"
-          id="userData"
-        >
-          <span class="text-comment">// User Data</span>
-          <p class="text-yellow-400">{</p>
-          <div class="pl-10 max-md:pl-6 max-sm:pl-3">
-            <p class="text-red-600 typing-line">
-              name: <span class="text-orange-400">"Franciss-prog"</span
-              ><span class="text-light" id="">,</span>
-            </p>
-            <p class="text-red-600 typing-line">
-              career:
-              <span class="text-orange-400">"FullStack Web Developer"</span
-              ><span class="text-light" id="">,</span>
-            </p>
-            <p class="text-red-600 typing-line">
-              focus:
-              <span class="text-orange-400">"Backend Web Developer"</span
-              ><span class="text-light" id="">,</span>
-            </p>
-          </div>
-          <p class="text-yellow-400">}</p>
-        </div>
+          id="portfolio"
+          class="flex flex-row  text-6xl w-full max-md:justify-between h-screen max-md:flex-col max-md:pb-7 gap-64 max-md:gap-20"
+        ></div>
       </section>
+     
     </main>
   </body>
   <!-- script -->

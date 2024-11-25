@@ -14,7 +14,7 @@ This is my personal portfolio website! It’s a simple webpage that shows who I 
 This website is built using:
 
 - **HTML**: For the structure of the webpage.
-- **CSS**: Using Tailwind CSS to make it look nice and responsive.
+- **CSS**: Using Tailwind CSS to make it look nice and responsive.  
 - **JavaScript**: For interactive elements like buttons and menus.
 - **Icons & Fonts**: Beautiful icons and fonts to make it stylish.
 
