@@ -33,6 +33,7 @@
       <!-- navbar -->
       <nav
         class="flex items-center justify-between h-20 p-20 max-md:px-10 max-sm:px-5"
+        id="renderNavbar"
       >
         <!-- three dots -->
         <section class="flex items-center gap-6 max-md:gap-4 max-sm:gap-3">
@@ -67,48 +68,33 @@
           >
             <i class="bi bi-list"></i>
           </button>
-          <!-- toggle navbar content -->
-          <div class="hidden" id="toggleNavbarContent">
-            <span>hey bro</span>
-          </div>
         </div>
       </nav>
       <!-- main content -->
       <section
-        class="flex justify-center items-center h-[70%] gap-10 max-md:flex-col"
+        class="flex justify-center items-start h-[60%] gap-10 flex-col px-20 text-5xl max-md:text-3xl max-sm:text-xl max-md:px-10 max-sm:px-6 max-md:h-[80%]"
       >
-        <!-- profile image -->
-        <div>
-          <img
-            src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/d8c35aab-28fb-4b5f-af66-57c4dba5cd74/dc8tu3k-2e6e6f55-1e77-4ddd-b563-ea634ccf109d.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2Q4YzM1YWFiLTI4ZmItNGI1Zi1hZjY2LTU3YzRkYmE1Y2Q3NFwvZGM4dHUzay0yZTZlNmY1NS0xZTc3LTRkZGQtYjU2My1lYTYzNGNjZjEwOWQucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.g9v_yAxK24UQpaj99xpUOwHEGdNWxZdBsBlX_UXiFOo"
-            alt="plauge"
-            class="h-[350px] max-md:h-[250px] max-sm:h-[200px]"
-          />
-        </div>
-
+        <span class="text-comment">// Contact Me</span>
         <div
-          class="flex flex-col items-start gap-4 font-bold text-xl max-md:text-lg max-sm:text-sm"
-          id="userData"
+          class="flex flex-col text-3xl max-md:text-xl max-sm:text-lg gap-10"
         >
-          <span class="text-comment">// User Data</span>
-          <p class="text-yellow-400">{</p>
-          <div class="pl-10 max-md:pl-6 max-sm:pl-3">
-            <p class="text-red-600 typing-line">
-              name: <span class="text-orange-400">"Franciss-prog"</span
-              ><span class="text-light" id="">,</span>
+          <!-- Social Media -->
+          <div class="flex gap-4 items-start max-md:flex-col max-sm:text-sm">
+            <p class="text-red-600">
+              Social Media<span class="text-light">:</span>
             </p>
-            <p class="text-red-600 typing-line">
-              career:
-              <span class="text-orange-400">"FullStack Web Developer"</span
-              ><span class="text-light" id="">,</span>
-            </p>
-            <p class="text-red-600 typing-line">
-              focus:
-              <span class="text-orange-400">"Backend Web Developer"</span
-              ><span class="text-light" id="">,</span>
-            </p>
+            <span class="text-violet-600">[</span>
+            <div class="max-md:pl-5 flex gap-3 max-md:flex-col" id="socials">
+              <a href="https://www.instagram.com/francis_prog/" target="_blank">"Instagram",</a>
+              <a href="https://github.com/Franciss-prog/Franciss-prog" target="_blank"
+                >"Github",</a
+              >
+              <a href="https://www.linkedin.com/in/francis-gil-abarintos-9b6788315?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=desktop_app" target="_blank">"LinkedIn",</a>
+              <a href="https://www.facebook.com/profile.php?id=100092201940238" target="_blank">"Facebook",</a>
+             
+            </div>
+            <span class="text-violet-600">]</span>
           </div>
-          <p class="text-yellow-400">}</p>
         </div>
       </section>
     </main>

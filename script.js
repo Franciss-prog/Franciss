@@ -12,7 +12,8 @@ const projects = [
   },
   {
     name: "Brewcode",
-    description: "put random things here asdfasfasdf",
+    description:
+      "BrewCode is a coffee shop web app that offers various types of coffee. It’s designed to be user-friendly and ensures secure, private orders for a smooth experience.",
     sourceCode:
       "https://github.com/Franciss-prog/web-app-projects/tree/main/Listify",
 
@@ -20,11 +21,14 @@ const projects = [
       "https://i.pinimg.com/736x/d9/ec/e7/d9ece738e31bf788ae82db250b2316bc.jpg",
   },
   {
-    name: "hey bro",
-    description: "put random things here adfasdfasdf",
+    name: "Portolio",
+    description:
+      "This is my portfolio website where I showcase my work as a frontend developer. It includes sections about me, my skills, my projects, and a contact form to reach out.",
     sourceCode:
-      "https://github.com/Franciss-prog/web-app-projects/tree/main/Listify",
-    livePreview: "",
+      "https://github.com/Franciss-prog/web-app-projects/tree/main/portfolio",
+    livePreview: "https://franciss-prog.vercel.app/",
+    image:
+      "https://imgs.search.brave.com/XZOHArSHhHMhOKE95mfQ-mBVu0c2BCa9YA9jEvMCV8s/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9jZG4u/cHJvZC53ZWJzaXRl/LWZpbGVzLmNvbS82/MDA5ZWM4Y2RhN2Yz/MDU2NDVjOWQ5MWIv/NjAxMDdmMWViNGJh/NDUxODk5ODQzMDQy/XzYwMDIwODZmNzJi/NzI3NjQ1ODAxZTQ2/MV9waG90b2dyYXBo/b3MuanBlZw",
   },
 ];
 // loaded functions
@@ -34,6 +38,8 @@ document.addEventListener("DOMContentLoaded", () => {
   validatePathname();
   styleTechStack();
   initializePortfolio();
+  styleSocialMedia();
+ 
 });
 
 //  function for initializing navbar styling
@@ -78,11 +84,18 @@ const setupToggleNavbar = () => {
   });
 };
 
+
+
 //  function for validating pathname
 const validatePathname = () => {
   const { pathname } = window.location;
-  if (pathname === "/Franciss" || pathname === "/") {
+  if (pathname === "/") {
     window.location.href = "index.html";
+  }
+  // for prdocution validation
+  if (pathname === "/Franciss") {
+    let {href} = window.location
+    href = "/Franciss/index.html" 
   }
 };
 
@@ -91,6 +104,11 @@ const styleTechStack = () => {
   const stacks = document.querySelectorAll("#techstack a");
   stacks.forEach((stack) => stack.classList.add("hover:text-orange-400"));
 };
+
+const styleSocialMedia = () => {
+  const socials = document.querySelectorAll("#socials a") 
+  socials.forEach((social) => social.classList.add("text-orange-400")) 
+}
 
 //  function for initializing portfolio
 const initializePortfolio = () => {
@@ -101,7 +119,7 @@ const initializePortfolio = () => {
     button.className = "flex flex-col items-center";
     button.id = "showProject";
     button.innerHTML = `
-    <div class="flex flex-col items-center">
+    <div class="flex flex-col items-center hover:text-orange-500">
         <i class="bi bi-folder"></i>
       <span class=' text-3xl'>${name}</span>
     </div>
@@ -111,14 +129,14 @@ const initializePortfolio = () => {
       Swal.fire({
         imageUrl: image,
         html: `
-           <div class="flex flex-col items-start text-light gap-5 text-left">
+           <div class="flex flex-col items-start text-light gap-5 text-left text-xl max-md:text-lg max-sm:text-md">
                   <span>${name}</span>
                   <span>${description}</span>
                   <div class="flex gap-10 items-center">
-                    <a href="${sourceCode} target="_blank">src Code</a>
+                    <a href="${sourceCode} target="_blank" class="hover:text-orange-500">[source Code]</a>
                    ${
                      livePreview
-                       ? `<a href="${livePreview}" target="_blank" id="live">Live Preview</a>`
+                       ? `<a href="${livePreview}" target="_blank" id="live" class="hover:text-orange-500">Live Preview</a>`
                        : ``
                    }
                   </div>
