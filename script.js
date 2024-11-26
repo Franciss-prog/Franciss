@@ -115,7 +115,7 @@ const initializePortfolio = () => {
                   <span>${name}</span>
                   <span>${description}</span>
                   <div class="flex gap-10 items-center">
-                    <a href="${sourceCode}">src Code</a>
+                    <a href="${sourceCode} target="_blank">src Code</a>
                    ${
                      livePreview
                        ? `<a href="${livePreview}" target="_blank" id="live">Live Preview</a>`
