@@ -39,7 +39,6 @@ document.addEventListener("DOMContentLoaded", () => {
   styleTechStack();
   initializePortfolio();
   styleSocialMedia();
- 
 });
 
 //  function for initializing navbar styling
@@ -52,10 +51,12 @@ const initializeNavbarStyling = () => {
     const href = link.getAttribute("href");
     if (href === currentPath || currentPath.includes(href)) {
       link.classList.add("underline");
+      link.classList.add("text-violet-400");
       document.title = link.innerHTML;
     } else {
       link.classList.remove("underline");
       link.classList.add("hover:underline");
+      link.classList.add("hover:text-violet-400");
     }
   });
 };
@@ -68,7 +69,7 @@ const setupToggleNavbar = () => {
     Swal.fire({
       title: "Where did you want to go?",
       html: `
-        <div class="flex flex-col gap-2 items-start">
+        <div class="flex flex-col gap-2 items-start " id="togglenavbarContent">
           <a href="index.html" class="hover:underline max-md:text-md max-sm:text-sm">---> Home</a>  
           <a href="about.html" class="hover:underline max-md:text-md max-sm:text-sm">---> About</a>  
           <a href="portfolio.html" class="hover:underline max-md:text-md max-sm:text-sm">---> Portfolio</a>  
@@ -80,11 +81,30 @@ const setupToggleNavbar = () => {
         popup: "bg-dark text-white",
         title: "text-lg",
       },
+      didOpen: () => {
+        // Reapply styles for the links inside #togglenavbarContent
+        const toggleNavbarLinks = document.querySelectorAll("#togglenavbarContent a");
+
+        toggleNavbarLinks.forEach((toggleNavbarlink) => {
+          const toggleNavbarhref = toggleNavbarlink.getAttribute("href");
+          const { pathname: currentPath } = window.location;
+
+          if (
+            toggleNavbarhref === currentPath ||
+            currentPath.includes(toggleNavbarhref)
+          ) {
+            toggleNavbarlink.classList.add("underline");
+            toggleNavbarlink.classList.add("text-violet-400");
+          } else {
+            toggleNavbarlink.classList.remove("underline");
+            toggleNavbarlink.classList.add("hover:underline");
+            toggleNavbarlink.classList.add("hover:text-violet-400");
+          }
+        });
+      },
     });
   });
 };
-
-
 
 //  function for validating pathname
 const validatePathname = () => {
@@ -94,8 +114,8 @@ const validatePathname = () => {
   }
   // for prdocution validation
   if (pathname === "/Franciss") {
-    let {href} = window.location
-    href = "/Franciss/index.html" 
+    let { href } = window.location;
+    href = "/Franciss/index.html";
   }
 };
 
@@ -104,11 +124,11 @@ const styleTechStack = () => {
   const stacks = document.querySelectorAll("#techstack a");
   stacks.forEach((stack) => stack.classList.add("hover:text-orange-400"));
 };
-
+// function for styling social media
 const styleSocialMedia = () => {
-  const socials = document.querySelectorAll("#socials a") 
-  socials.forEach((social) => social.classList.add("text-orange-400")) 
-}
+  const socials = document.querySelectorAll("#socials a");
+  socials.forEach((social) => social.classList.add("hover:text-orange-400"));
+};
 
 //  function for initializing portfolio
 const initializePortfolio = () => {
@@ -121,15 +141,15 @@ const initializePortfolio = () => {
     button.innerHTML = `
     <div class="flex flex-col items-center hover:text-orange-500">
         <i class="bi bi-folder"></i>
-      <span class=' text-3xl'>${name}</span>
+      <span class=' text-3xl max-md:text-xl'>${name}</span>
     </div>
     `;
 
     button?.addEventListener("click", () => {
       Swal.fire({
-        imageUrl: image,
         html: `
-           <div class="flex flex-col items-start text-light gap-5 text-left text-xl max-md:text-lg max-sm:text-md">
+           <div class="flex flex-col items-start text-light gap-5 text-left text-xl max-md:text-md max-sm:text-sm h-auto ">
+           <img src="${image}" class=" aspect-video h-[200px] w-full max-md:h-[170px]"/>
                   <span>${name}</span>
                   <span>${description}</span>
                   <div class="flex gap-10 items-center">
@@ -142,12 +162,12 @@ const initializePortfolio = () => {
                   </div>
           </div>
         `,
-        imageWidth: 400,
-        imageHeight: 200,
+
         imageAlt: "Custom image",
         customClass: {
-          popup: "bg-dark text-white",
+          popup: "bg-dark text-white max-md:",
           title: "text-lg flex items-start",
+          image: "max-md:h-[150px] max-md:w-[300px]",
         },
         showConfirmButton: false,
       });
