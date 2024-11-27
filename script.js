@@ -157,7 +157,7 @@ const initializePortfolio = () => {
                    ${
                      livePreview
                        ? `<a href="${livePreview}" target="_blank" id="live" class="hover:text-orange-500">Live Preview</a>`
-                       : ``
+                       : `<span class=" cursor-not-allowed text-red-600 underline">Under Maintenance</span>`
                    }
                   </div>
           </div>
