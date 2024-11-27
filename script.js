@@ -83,7 +83,9 @@ const setupToggleNavbar = () => {
       },
       didOpen: () => {
         // Reapply styles for the links inside #togglenavbarContent
-        const toggleNavbarLinks = document.querySelectorAll("#togglenavbarContent a");
+        const toggleNavbarLinks = document.querySelectorAll(
+          "#togglenavbarContent a"
+        );
 
         toggleNavbarLinks.forEach((toggleNavbarlink) => {
           const toggleNavbarhref = toggleNavbarlink.getAttribute("href");
@@ -113,9 +115,12 @@ const validatePathname = () => {
     window.location.href = "index.html";
   }
   // for prdocution validation
-  if (pathname === "https://franciss-prog.github.io/Franciss/") {
-    let { href } = window.location;
-    href = "https://franciss-prog.github.io/Franciss/index.html";
+  if (
+    pathname === "https://franciss-prog.github.io/Franciss/" ||
+    pathname.includes("/Franciss")
+  ) {
+    window.location.href =
+      "index.html";
   }
 };
 
