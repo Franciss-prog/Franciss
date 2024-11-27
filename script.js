@@ -113,9 +113,9 @@ const validatePathname = () => {
     window.location.href = "index.html";
   }
   // for prdocution validation
-  if (pathname === "/Franciss") {
+  if (pathname === "https://franciss-prog.github.io/Franciss/") {
     let { href } = window.location;
-    href = "/Franciss/index.html";
+    href = "https://franciss-prog.github.io/Franciss/index.html";
   }
 };
 
