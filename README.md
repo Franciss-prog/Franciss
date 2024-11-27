@@ -1,44 +1,80 @@
 # My Portfolio Website
 
-This is my personal portfolio website! It’s a simple webpage that shows who I am, what I do, and how to contact me.
+This is a simple website to show who I am and what I do. It includes my projects, a bit about me, and ways to contact me. It's built with basic web technologies: **HTML**, **CSS (Tailwind CSS)**, and **JavaScript**.
 
-## What’s Inside?
+## Website Overview
 
-- **My Info**: You’ll see my name, job title, and the type of work I focus on.
-- **Easy Navigation**: Links to Home, About, Portfolio, and Contacts.
-- **Looks Good Everywhere**: The site works on phones, tablets, and desktops.
-- **Dark & Light Mode**: Switches themes based on your preference.
+- **Home Page**: A main page with an interactive terminal header and links to other pages.
+- **About Page**: Information about me, including my hobbies and the programming languages I use.
+- **Portfolio Page**: A list of projects I have worked on, with links to their code and live versions.
+- **Contact Page**: Links to my social media profiles so you can contact or follow me.
 
-## How It’s Made
+---
 
-This website is built using:
+## Files in This Project
 
-- **HTML**: For the structure of the webpage.
-- **CSS**: Using Tailwind CSS to make it look nice and responsive.  
-- **JavaScript**: For interactive elements like buttons and menus.
-- **Icons & Fonts**: Beautiful icons and fonts to make it stylish.
+### 1. `index.html` (Home Page)
+This page is where you start. It shows:
+- A **navbar** for easy navigation.
+- A **terminal-style header** for a cool effect.
+- Links to my **projects** and **contact** information.
 
-## How to See It
+### 2. `about.html` (About Page)
+This page tells you:
+- Who I am.
+- What I enjoy doing (like coding, cycling, and playing games).
+- The **tech stack** (programming languages and tools) I work with, with links to learn more about each one.
 
-1. **Download the files**: Click the green "Code" button above and download the ZIP file.
-2. **Open the file**: Double-click the `index.html` file. It will open in your web browser.
+### 3. `portfolio.html` (Portfolio Page)
+This page shows:
+- A list of my **projects** with details about each one.
+- Links to see the code or live version of each project.
 
-That’s it! You can now see the website.
+### 4. `contact.html` (Contact Page)
+Here, you can find:
+- Links to my **social media** profiles like **GitHub**, **LinkedIn**, **Instagram**, and **Facebook**.
 
-## What’s Next?
+### 5. `global.css`
+This file adds styles to the website. It:
+- Uses **Tailwind CSS** for easy styling.
+- Makes the website look nice and modern.
+- Hides the scrollbar to keep the page clean.
 
-In the future, I plan to:
+### 6. `script.js`
+This file makes the website interactive. It:
+- Shows the current page in the navbar.
+- Toggles the menu on smaller screens (for mobile devices).
+- Opens a **modal** with more details when you click on a project.
 
-- Add more detailed pages for About, Portfolio, and Contact.
-- Make the website more interactive with cool animations.
-- Add a form to allow visitors to send me messages directly.
+---
 
-## Contact Me
+## How to Use the Website
 
-If you’d like to connect or give feedback:
+1. Open the website by clicking on any of the **HTML** files (e.g., `index.html`, `about.html`, `portfolio.html`, `contact.html`) in your browser.
+2. You can click the links in the navbar to move between pages (Home, About, Portfolio, and Contact).
+3. On smaller screens (like phones), the navbar will turn into a button you can click to open the menu.
 
-- **Name**: Franciss-prog
-- **Job**: Full-Stack Web Developer
-- **Focus**: Backend Development
+---
 
-Thank you for visiting my portfolio!
+## How to Add a New Project
+
+To add a new project to your portfolio:
+
+1. Open `script.js`.
+2. Find the **projects** array in the file.
+3. Add a new project by copying and pasting an existing one and changing the details:
+   - `name`: The name of your project.
+   - `description`: A short description of the project.
+   - `sourceCode`: A link to the code (e.g., GitHub).
+   - `livePreview`: A link to the live project (if available).
+   - `image`: A link to an image for the project.
+
+Example:
+```javascript
+{
+  name: "New Project",
+  description: "A short description of the project.",
+  sourceCode: "https://github.com/username/newproject",
+  livePreview: "https://newproject.example.com",
+  image: "https://example.com/project-image.jpg"
+}

@@ -162,7 +162,6 @@ const initializePortfolio = () => {
                   </div>
           </div>
         `,
-
         imageAlt: "Custom image",
         customClass: {
           popup: "bg-dark text-white max-md:",
