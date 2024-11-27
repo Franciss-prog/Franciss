@@ -69,7 +69,7 @@ const setupToggleNavbar = () => {
     Swal.fire({
       title: "Where did you want to go?",
       html: `
-        <div class="flex flex-col gap-2 items-start " id="togglenavbarContent">
+        <div class="flex flex-col gap-2 items-start" id="togglenavbarContent">
           <a href="index.html" class="hover:underline max-md:text-md max-sm:text-sm">---> Home</a>  
           <a href="about.html" class="hover:underline max-md:text-md max-sm:text-sm">---> About</a>  
           <a href="portfolio.html" class="hover:underline max-md:text-md max-sm:text-sm">---> Portfolio</a>  
@@ -161,7 +161,7 @@ const initializePortfolio = () => {
                   <span>${name}</span>
                   <span>${description}</span>
                   <div class="flex gap-10 items-center">
-                    <a href="${sourceCode} target="_blank" class="hover:text-orange-500">[source Code]</a>
+                    <a href="${sourceCode}" target="_blank" class="hover:text-orange-500">[source Code]</a>
                    ${
                      livePreview
                        ? `<a href="${livePreview}" target="_blank" id="live" class="hover:text-orange-500">Live Preview</a>`
