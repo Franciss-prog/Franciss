@@ -108,19 +108,22 @@ const setupToggleNavbar = () => {
   });
 };
 
-//  function for validating pathname
 const validatePathname = () => {
-  const { pathname } = window.location;
+  // Get the current pathname and origin
+  const { pathname, origin } = window.location;
+
+  // Handle local development path validation (e.g., localhost)
   if (pathname === "/") {
     window.location.href = "index.html";
   }
-  // for prdocution validation
-  if (
-    pathname === "https://franciss-prog.github.io/Franciss/" ||
-    pathname.includes("/Franciss")
-  ) {
-    window.location.href =
-      "index.html";
+
+  // Handle production path validation (on GitHub Pages)
+  // Extract the base path (repo name) for GitHub Pages from the origin
+  const basePath = origin.includes("github.io") ? origin.split("/")[3] : "";
+
+  // If the pathname is the root or includes the base path, redirect to index.html
+  if (pathname === `/${basePath}/` || pathname.includes(`/${basePath}/`)) {
+    window.location.href = "index.html";
   }
 };
 
