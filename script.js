@@ -15,7 +15,7 @@ const projects = [
     description:
       "BrewCode is a coffee shop web app that offers various types of coffee. It’s designed to be user-friendly and ensures secure, private orders for a smooth experience.",
     sourceCode:
-      "https://github.com/Franciss-prog/web-app-projects/tree/main/Listify",
+      "https://github.com/Franciss-prog/web-app-projects/tree/main/prisma-bun-brewcode",
 
     image:
       "https://i.pinimg.com/736x/d9/ec/e7/d9ece738e31bf788ae82db250b2316bc.jpg",
@@ -118,7 +118,6 @@ const validatePathname = () => {
     window.location.href = "index.html";
   }
 
-  // Handle production path validation (on GitHub Pages)
   // Extract the base path (repo name) for GitHub Pages from the origin
   const basePath = origin.includes("github.io") ? origin.split("/")[3] : "";
 
