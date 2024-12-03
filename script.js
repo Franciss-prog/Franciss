@@ -48,6 +48,7 @@ const initializeNavbarStyling = () => {
   const { pathname } = window.location;
   const currentPath = pathname;
 
+  // mapping the data
   links.forEach((link) => {
     const href = link.getAttribute("href");
     if (href === currentPath || currentPath.includes(href)) {
