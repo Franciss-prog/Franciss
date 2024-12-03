@@ -120,7 +120,9 @@ const validatePathname = () => {
   }
 
   // Extract the base path (repo name) for GitHub Pages from the origin
-  const basePath = origin.includes("github.io") ? origin.split("/")[3] : "";
+  const basePath = window.location.origin.includes("github.io")
+    ? window.location.origin.split("/")[3]
+    : "";
 
   // If the pathname is the root or includes the base path, redirect to index.html
   if (pathname === `/${basePath}/` || pathname.includes(`/${basePath}/`)) {
