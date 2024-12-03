@@ -109,6 +109,7 @@ const setupToggleNavbar = () => {
   });
 };
 
+// function for validation in pathname
 const validatePathname = () => {
   // Get the current pathname and origin
   const { pathname, origin } = window.location;
@@ -165,7 +166,7 @@ const initializePortfolio = () => {
                    ${
                      livePreview
                        ? `<a href="${livePreview}" target="_blank" id="live" class="hover:text-orange-500">Live Preview</a>`
-                       : `<span class=" cursor-not-allowed text-red-600 underline">Under Maintenance</span>`
+                       : `<span class=" cursor-not-allowed text-red-600 underline">Under Construction</span>`
                    }
                   </div>
           </div>
